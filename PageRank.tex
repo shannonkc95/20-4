@@ -46,6 +46,7 @@
 
 
 
+
 \makenomenclature
 \renewcommand{\nomname}{List of Symbols and Abbreviations}
 
@@ -1164,6 +1165,17 @@ The dataset used in this study is limited, as only a small proportion of total v
 
 %--------------------Conclusion
 \chapter{Conclusion} \label{chap:Conclusion}
+In chapter 2, we explored how the PageRank algorithm could be represented mathematically, firstly by using iterative summation formula to represent the circular definitive of a pages rank. We mainly focused on using matrices to represent the transition probabilities for a random surfer moving through the web graph. We introduced the concept of modifications in order to ensure that our Google matrix was stochastic, irreducible and aperiodic, which allows us to use the power method in order to calculate a stationary distribution which relates to the PageRank vectors of all pages in the web graph. The power method was chosen as the method for solving the PageRank equation, as even though it is slow to converge to the PageRank vector, the power method is storage friendly whilst not being too computationally taxing for a system. 
+
+In Chapter 3, we discussed other algorithms that could be useful in ranking web pages, specifically the HITS and SALSA algorithms. Both of these algorithms have the advantage over PageRank by providing dual-rankings for the web pages that they sample. The web pages are ranked in terms of their authority and hub weights, i.e. if they are good sources of information on a given query, or if they are good compilations of links to authoritative pages. HITS and SALSA are also advantageous as they run on a smaller graph than PageRank, however both are query-dependant algorithms, which increases the computation time at query-time for the user. 
+
+In Chapter 4 we explored possible improvements to the standard PageRank algorithm in order to increase the accuracy, and to more realistically model human activity in a web graph. In this chapter we discussed the Query-Dependant PageRank, which aims to implement a more intelligent surfer which will move to pages that are more relevant to the query of the user. We also explored personalized PageRank systems, specifically Haveliwala's Topic-Sensitive PageRank algorithm, which aims to take a users personal mixture of interests into account when considering which pages a random surfer may teleport to. Finally we introduced the Weighted PageRank algorithm, which assigns more weights to pages which have a larger proportion of inlinks and outlinks in the graph. All of the improvements discussed have been shown to improve the quality of the PageRank vector with respect to being more close to how a human surfer would actually move through the web graph.
+
+In Chapter 5 we explored how the PageRank algorithm could have applications beyond ranking web pages, as it in essence can be applied to any graph network to measure what the system deems to be the most important, such as which cultures have had the greatest impact on World culture by applying the algorithm to the Wikipedia database. We generally focused on the use of the PageRank algorithm in evaluating urban spaces in terms of human movement, with an attempt to predict vehicle movement in Durham. We were unable to find a strong correlation between PageRank, Weighted PageRank and vehicle movement, this could be due to factors such as the heavily pedestrianised town, also due to a limited dataset.
+
+This study could be expanded in Durham by looking to see if we could predeict pedestrian movement, and use more modern methods to improve the collection of the dataset, such as automatic counters. 
+
+The project didn't inspect other sections of the PageRank algorithm, for example it is possible to solve the PageRank algorithm by treating the web as a linear system, and by using linear algebra. 
 
 %--------------------Bibliography
 \newpage
